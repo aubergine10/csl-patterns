@@ -1,2 +1,2 @@
-# csl-patterns
-Modding patterns for Cities: Skylines
+# csl-pearls
+Modding pearls for Cities: Skylines
