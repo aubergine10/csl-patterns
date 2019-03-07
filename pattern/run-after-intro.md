@@ -24,7 +24,7 @@ public class Mod : IUserMod
   public void OnDisabled()
   {
     // remove event listener (won't error if there isn't one)
-    LoadingManager.instance.m_introLoaded -= PerformCompatibilityChecks;
+    LoadingManager.instance.m_introLoaded -= DoStuff;
   }
 
   public void DoStuff() {
