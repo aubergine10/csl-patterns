@@ -33,8 +33,6 @@ public List<PluginInfo> GetBundledMods()
 
 ### PluginInfo for specific bundled mod
 
-This returns the `PluginInfo` for a bundled mod of specified name...
-
 > Requires [get-mod-name](get-mod-name.md)
 
 ```csharp
@@ -61,8 +59,6 @@ public PluginInfo GetBundledModInfo(string name)
 ```
 
 ### Enable or Disable a bundled mod
-
-Quickly enable or disable a bundled mod...
 
 ```csharp
 public void SetBundledModState(string name, bool enabled)
