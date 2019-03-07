@@ -1,6 +1,6 @@
 # Run after intro
 
-If enabled, the `OnEnabled()` method of your main class (that uses the `IUserMod` interface) will be invoked while the loading screen (usually Paradox logo) is visible meaning that the UIView features will not be fully initialised. This can cause a problem if you want to create some sort of UI element at that point (such as a 'Mod Incompatibility' warning).
+If your mod is enabled when the game starts, the `OnEnabled()` method of your main class (that uses the `IUserMod` interface) will be invoked while the loading screen (usually Paradox logo) is visible. During this stage of the app loading, UIView features will not be fully initialised. This can be trublesome if you want to create some UI when your mod is enabled (such as a 'Mod Incompatibility' warning panel).
 
 The code snippet below shows how to ovecome this issue:
 
@@ -28,7 +28,7 @@ public class Mod : IUserMod
   }
 
   public void DoStuff() {
-    // ...
+    // UIView is fully initialised at this point
   }
 }
 ```
