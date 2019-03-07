@@ -22,7 +22,7 @@ Open the `AssemblyInfo.cs` file in your project and find the following line (usu
 
 Add a wildcard to denote where the auto-incrementing part of the version number should start (recommend using the minor or build position):
 
-```
+```csharp
 // this will auto-increment the minor, build and revision parts of the version
 [assembly: AssemblyVersion("1.*")]
 ```
