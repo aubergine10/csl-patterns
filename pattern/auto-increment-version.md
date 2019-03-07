@@ -7,7 +7,7 @@ Keep forgetting to bump the version of your mod? Get the compiler to do it for y
 While VS2017 is closed, edit the `.csproj` file of your mod and look for the following:
 
 ```xml
-    <Deterministic>true</Deterministic>
+<Deterministic>true</Deterministic>
 ```
 
 Change `true` to `false` and save the file.
