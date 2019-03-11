@@ -2,6 +2,8 @@
 
 Keep forgetting to bump the version of your mod? Get the compiler to do it for you...
 
+> Note: If you do this, and use the debug trace style menioned in the 'Bonus' section at the end of this article, the log analyser will be able to link together much more information about your mod.
+
 ### Step 1: Disable deterministic setting
 
 While VS2017 is closed, edit the `.csproj` file of your mod and look for the following:
@@ -56,14 +58,31 @@ You can now access the static `ver` or `name` fields from anywhere in your mod, 
 Debug.log($"[{Mod.name}] hello!");
 ```
 
-Or, if you just want the version:
-
-```csharp
-Debug.log($"My mod version is: {Mod.ver}");
-```
+> The CLS Log Analyser will automatically detect trace in that format and link it to your mod, making trawling log files much less painful.
 
 If you want the full veersion string:
 
 ```csharp
-Debug.log($"Build: {Assembly.GetExecutingAssembly().GetName().Version}");
+Debug.log($"[{Mod.name}] Build: {Assembly.GetExecutingAssembly().GetName().Version}");
+```
+
+I normally output that when the mod is enabled:
+
+```csharp
+public class Mod : IUserMod
+{
+  // ...
+   
+  public void OnEnabled()
+  {
+    Debug.Log($"[{name}] Build {Assembly.GetExecutingAssembly().GetName().Version} Enabled.");
+
+    // ...
+  }
+  
+  public void OnDisabled()
+  {
+    Debug.Log($"[{name}] Disabled");
+  }
+}
 ```
