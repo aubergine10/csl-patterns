@@ -60,7 +60,7 @@ Debug.log($"[{Mod.name}] hello!");
 
 > The [CSLM Log Analyser](https://cslmodding.info/log) will automatically detect trace in that format and link it to your mod, making trawling log files much less painful.
 
-If you want the full veersion string:
+If you want the full version string:
 
 ```csharp
 Debug.log($"[{Mod.name}] Build: {Assembly.GetExecutingAssembly().GetName().Version}");
