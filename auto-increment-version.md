@@ -58,7 +58,7 @@ You can now access the static `ver` or `name` fields from anywhere in your mod, 
 Debug.log($"[{Mod.name}] hello!");
 ```
 
-> The CLS Log Analyser will automatically detect trace in that format and link it to your mod, making trawling log files much less painful.
+> The [CSLM Log Analyser](https://cslmodding.info/log) will automatically detect trace in that format and link it to your mod, making trawling log files much less painful.
 
 If you want the full veersion string:
 
